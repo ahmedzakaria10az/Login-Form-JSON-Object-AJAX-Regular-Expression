@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Login Form</h1>
+    <form id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <br>
+        <label for="rememberMe">
+            <input type="checkbox" id="rememberMe"> Remember Me</label>
+            <br>
+        <button type="submit">Login</button>
+    </form>
+
+    <h2>Retrieve Data</h2>
+    <label for="userId">Please enter User ID:</label>
+    <input type="text" id="userId" placeholder="Please enter User ID">
+    <button onclick="displayUserById()">Display User</button>
+    <div id="userDetails"></div>
+    <br>
+    <h3>Select User from Dropdown</h3>
+    <select id="userDropdown" onchange="displaySelectedUser()">
+        <option value="">Select a User</option>
+    </select>
+    <div id="dropdownUserDetails"></div>
+
+
+    <h4>Input Validation</h4>
+
+    <form id="userForm">
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" placeholder="Enter your full name">
+        <span id="fullNameError" style="color: blue; display: none;">Invalid full name</span>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter your email address">
+        <span id="emailError" style="color: blue; display: none;">Invalid email</span>
+        <br>
+        <button type="button" onclick="validateInput()">Submit</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
